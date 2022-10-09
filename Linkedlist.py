@@ -40,6 +40,21 @@ class Linked_List:
          self.head = Node(data, self.head)  
         self.size += 1
 
+    def insert_after(self, data, node_data):
+        # iterate from head locate 'block'
+        current = self.head
+        while(current.data != node_data):
+            current = current.next
+        if(current != node_data):
+          return -1
+        else:
+            city = Node("San Mateo", current.next)
+            current.next = city
+            if(current == self.tail):
+                self.tail = city
+            self.size+= 1
+
+
 # created a new node
 
 my_list = Linked_List()
@@ -47,7 +62,11 @@ my_list.insert_front("Heg")
 my_list.insert_front("Gumus")
 my_list.insert_front("Amed")
 my_list.insert_front("Block")
-my_list.insert_front("erika")
+my_list.insert_front("Erika")
+my_list.insert_after("San Mateo","Amed")
+
+print(f'tail:{my_list.tail}')
+
 
 print(my_list)
 
