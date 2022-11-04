@@ -24,6 +24,7 @@ class Player {
 }
 class Wizard extends Player {
     constructor(name,type){
+        //super() runs function in Player object
         super(name, type)
         console.log('wizard', this);
     }      
