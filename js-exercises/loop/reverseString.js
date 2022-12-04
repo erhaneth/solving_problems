@@ -16,8 +16,7 @@ function reverse(string) {
     return reversedString;
   }
 
-  let string = "cat";
-  let reversedString = reverse(string);
-  
-  console.log(reversedString);  // Output: "tac"
-  
+let string = "cat";
+let reversedString = reverse(string);
+
+console.log(reversedString);  // Output: "tac"
