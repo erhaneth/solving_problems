@@ -1,26 +1,15 @@
+// In JavaScript, "binding" refers to the process of setting the
+// value of a variable to an object or function. 
 class Employee {
-    constructor(name, salary) {
-      this.name = name;
-      this.salary = salary;
-    }
-  
-    calculatePaycheck() {
-      return this.salary / 12;
-    }
+  constructor(name, salary) {
+    this.name = name;
+    this.salary = salary;
   }
-  
-  const john = new Employee('John', 60000);
-  const jane = new Employee('Jane', 75000);
-  
 
-  function calculateTotalPayroll(employees) {
-    let totalPayroll = 0;
-    for (const employee of employees) {
-      totalPayroll += employee.calculatePaycheck.bind(employee)();
-    }
-    return totalPayroll;
+  calculatePaycheck() {
+    return this.salary / 12;
   }
-  
-  const employees = [john, jane];
-  const totalPayroll = calculateTotalPayroll(employees);
-  
+}
+
+const john = new Employee("John", 60000);
+const jane = new Employee("Jane", 75000);
