@@ -19,7 +19,13 @@ function longestCommonPrefix(strs) {
       }
     }
   }
-
+  //   console.log(prefix);
   // Return prefix, which should contain the longest common prefix among input strings
   return prefix;
 }
+
+console.log(longestCommonPrefix(["flower", "flow", "flight"])); // "fl"
+console.log(longestCommonPrefix(["dog", "racecar", "car"])); // ""
+console.log(longestCommonPrefix(["hello", "heaven", "heavy"])); // "he"
+console.log(longestCommonPrefix(["cat", "cattle", "cab"])); // "c"
+console.log(longestCommonPrefix([])); // ""
